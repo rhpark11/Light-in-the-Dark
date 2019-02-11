@@ -260,6 +260,7 @@ GameObject:
   - component: {fileID: 4038874606319742275}
   - component: {fileID: 4038874606319742274}
   - component: {fileID: 721321845661619847}
+  - component: {fileID: 367894564}
   m_Layer: 0
   m_Name: Building Test
   m_TagString: Untagged
@@ -350,10 +351,12 @@ MonoBehaviour:
   Energy: 0
   maxEnergy: 50
   gameManager: {fileID: 0}
-  changeEnergy: 10
-  timeBetweenEnergylossPerSecond: 1
-  energyLostPerSecond: 2
+  changeEnergy: 0.5
+  timeBetweenEnergyloss: 0.1
+  timeBetweenEnergyGain: 0.1
+  energyLostPerSecond: 0.5
   EnergyBar: {fileID: 25118384}
+  ToggleEnergy: 0
 --- !u!222 &721321845661619847
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -362,3 +365,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4038874606319742277}
   m_CullTransparentMesh: 0
+--- !u!58 &367894564
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4038874606319742277}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1

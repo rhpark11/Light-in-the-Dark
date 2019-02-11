@@ -15,70 +15,95 @@ public class Building : MonoBehaviour
     
     public float changeEnergy; // how much energy the building takes 
     
-    public float timeBetweenEnergylossPerSecond = 1f;
+    public float timeBetweenEnergyloss = 1f;
     private float startEnergyLossRate;
+
+    public float timeBetweenEnergyGain;
+    private float startEnergyGainRate;
 
     public float energyLostPerSecond;
 
     public Image EnergyBar;
 
-    
+    public bool ToggleEnergy = false;
+
+    private Collider2D buildingHitBox;
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>(); // should only be one GameManager! more like a (EnergyManager)
-        startEnergyLossRate = timeBetweenEnergylossPerSecond;
+        buildingHitBox = gameObject.GetComponent<Collider2D>();
+        startEnergyLossRate = timeBetweenEnergyloss;
+        startEnergyGainRate = timeBetweenEnergyloss;    //Energy is gained at the same time interval as energy being lost.
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        // If the player clicks on the buildings 2D collider it will toggle from giving energy to not giving energy.
+        if (Input.GetMouseButtonDown(0))
+        {
+
+            Vector3 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+
+            if (buildingHitBox.OverlapPoint(mp))
+            {
+                ToggleEnergy = !ToggleEnergy;
+            }
+
+        }
+        
+        if (ToggleEnergy)
         {
             increaseBuildingEnergy();
         }
         
-        if (Input.GetKeyDown(KeyCode.F))
+        if (!ToggleEnergy)
         {
-            releaseEnergy();
+           // releaseEnergy();
         }
 
-        if (Energy > 0)
+        if (Energy > 0 && !ToggleEnergy)
         {
-            if (timeBetweenEnergylossPerSecond > 0)
+            if (timeBetweenEnergyloss > 0)
             {
-                timeBetweenEnergylossPerSecond -= Time.deltaTime;
+                timeBetweenEnergyloss -= Time.deltaTime;
             }
             else
             {
                 Energy -= energyLostPerSecond;
-                timeBetweenEnergylossPerSecond = startEnergyLossRate;
+                timeBetweenEnergyloss = startEnergyLossRate;
             }
         }
 
         EnergyBar.fillAmount = Energy / maxEnergy;
     }
 
-    private void FixedUpdate()
-    {
-        
-    }
+
 
     public void increaseBuildingEnergy()
     {
         if (Energy < maxEnergy)
         {
-            
-            gameManager.TakeEnergy(changeEnergy, this); // public function from the GameManager class.
+            if (timeBetweenEnergyGain > 0)
+            {
+                timeBetweenEnergyGain -= Time.deltaTime;
+            }
+            else
+            {
+                gameManager.TakeEnergyFromManager(changeEnergy, this); // public function from the GameManager class.
+                timeBetweenEnergyGain = startEnergyGainRate;
+            }
         }
     }
 
-    public void releaseEnergy()
-    {
-        if (Energy > 0)
-        {
-            Energy -= 10f;
-            gameManager.addEnergy(changeEnergy, this);
-        }
-    }
+//    public void releaseEnergy()
+//    {
+ //       if (Energy > 0)
+ //       {
+ //           Energy -= 10f;
+//            gameManager.addEnergy(changeEnergy, this);
+//        }
+//    }
     
 }
