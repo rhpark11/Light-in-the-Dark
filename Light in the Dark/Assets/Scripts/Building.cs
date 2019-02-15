@@ -43,7 +43,20 @@ public class Building : MonoBehaviour
     void Update()
     {
         // If the player clicks on the buildings 2D collider it will toggle from giving energy to not giving energy.
-        if (Input.GetMouseButtonDown(0))
+//        if (Input.GetMouseButtonDown(0))
+//        {
+
+//            Vector3 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+
+//            if (buildingHitBox.OverlapPoint(mp))
+//            {
+//                ToggleEnergy = !ToggleEnergy;
+//            }
+
+//        }
+        
+        if (Input.GetMouseButton(0))
         {
 
             Vector3 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -51,10 +64,29 @@ public class Building : MonoBehaviour
 
             if (buildingHitBox.OverlapPoint(mp))
             {
-                ToggleEnergy = !ToggleEnergy;
+                ToggleEnergy = true;
+            }
+            else
+            {
+                ToggleEnergy = false;
             }
 
         }
+        // toggle true when player holds button down
+        if (Input.GetMouseButtonUp(0))
+        {
+
+            Vector3 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+
+            if (buildingHitBox.OverlapPoint(mp))
+            {
+                ToggleEnergy = false;
+            }
+
+        }
+        
+        
         
         if (ToggleEnergy)
         {
