@@ -6,51 +6,54 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public float Energy = 100f;
+    public float energy = 100f;
+    
     public Image energyBar;
 
-    private float maxEnergy;
-    public float dEnergy = 10f;
+    public float maxEnergy;
     
     public float energyRegenRate = 1f;
 
+    
     public float timeBetweenEnergyGain;
     private float startTimebetweenEnergyGain;
-    public bool isRegenerating = true;
+   
     
     
     void Start()
     {
-        maxEnergy = Energy;
+        energy = maxEnergy;
         startTimebetweenEnergyGain = timeBetweenEnergyGain;
     }
 
    
     void Update()
     {
-        
-        if (Energy >= maxEnergy)
+        //checks if the energy has reached the floor or ceiling (needs work)
+        if (energy >= maxEnergy)
         {
-            Energy = maxEnergy;
-        }else if (Energy <= 0)
+            energy = maxEnergy;
+        }
+        else if (energy <= 0)
         {
-            Energy = 0;
+            energy = 0;
         }
         
-        energyBar.fillAmount = Energy / maxEnergy;
+        energyBar.fillAmount = energy / maxEnergy;
         
         
-        //Gaining energy per second
+        //Gaining energy per time specified in the variable timeBetweenEnergyGain
+        
 
-        if (timeBetweenEnergyGain <= 0 && Energy < maxEnergy)
+        if (timeBetweenEnergyGain <= 0 && energy < maxEnergy)
         {
-            if (energyRegenRate + Energy > maxEnergy)
+            if (energyRegenRate + energy > maxEnergy)
             {
-                Energy = maxEnergy;
+                energy = maxEnergy;
             }
             else
             {
-                Energy += energyRegenRate;
+                energy += energyRegenRate;
             }
             
             timeBetweenEnergyGain = startTimebetweenEnergyGain;
@@ -63,37 +66,44 @@ public class GameManager : MonoBehaviour
     }
 
 
-    //Energy is given from the game manager to the building requesting it
+    //Energy is given from the GameManager to the building requesting it
     public void TakeEnergyFromManager(float dEnergy, Building building)
     {
  
 
-        if (dEnergy + building.Energy > building.maxEnergy)
+        if (dEnergy + building.energy > building.maxEnergy)
         {
             
-            dEnergy = building.maxEnergy - building.Energy;
-            Energy -= dEnergy;
-            building.Energy += dEnergy;
+            dEnergy = building.maxEnergy - building.energy;
+            energy -= dEnergy;
+            building.energy += dEnergy;
         }
         else
         {
-            Energy -= dEnergy;
-            building.Energy += dEnergy;
-        }
-    }
-
-    public void addEnergy(float dEnergy, Building building)
-    {
-        if (dEnergy + building.Energy > building.maxEnergy)
-        {
-            dEnergy = building.maxEnergy - building.Energy;
-            Energy += dEnergy;
-        }
-        else
-        {
-            Energy += dEnergy;
+            energy -= dEnergy;
+            building.energy += dEnergy;
         }
 
+        if (energy <= 0)
+        {
+            building.ToggleEnergy = false;
+        }
+        
     }
+
+    //Not being used in the game.
+ //   public void addEnergy(float dEnergy, Building building)
+ //   {
+ //      if (dEnergy + building.Energy > building.maxEnergy)
+ //       {
+ //           dEnergy = building.maxEnergy - building.Energy;
+ //           Energy += dEnergy;
+ //       }
+ //       else
+ //       {
+ //           Energy += dEnergy;
+ //       }
+
+ //   }
     
 }

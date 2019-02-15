@@ -7,22 +7,25 @@ using UnityEngine.UI;
 public class Building : MonoBehaviour
 {
     
-    public float Energy = 0f; // how much energy this building currently has
+    public float energy = 0f; // how much energy this building currently has
     
     public float maxEnergy;    // how much energy can this building take
 
     public GameManager gameManager;
     
-    public float changeEnergy; // how much energy the building takes 
+    public float changeEnergy; // how much energy the building takes from the GameManager
     
+    //These are the time variables I used
     public float timeBetweenEnergyloss = 1f;
     private float startEnergyLossRate;
 
     public float timeBetweenEnergyGain;
     private float startEnergyGainRate;
 
-    public float energyLostPerSecond;
+    //Rate at which the energy is lost per the value of time between energy lost
+    public float energyLostPerTick;
 
+    //The image associated to the bar
     public Image EnergyBar;
 
     public bool ToggleEnergy = false;
@@ -31,7 +34,7 @@ public class Building : MonoBehaviour
     void Start()
     {
         gameManager = FindObjectOfType<GameManager>(); // should only be one GameManager! more like a (EnergyManager)
-        buildingHitBox = gameObject.GetComponent<Collider2D>();
+        buildingHitBox = gameObject.GetComponent<Collider2D>(); //So the game knows when you clicked on a building
         startEnergyLossRate = timeBetweenEnergyloss;
         startEnergyGainRate = timeBetweenEnergyloss;    //Energy is gained at the same time interval as energy being lost.
     }
@@ -58,12 +61,12 @@ public class Building : MonoBehaviour
             increaseBuildingEnergy();
         }
         
-        if (!ToggleEnergy)
+        if (energy >= maxEnergy)
         {
-           // releaseEnergy();
+            ToggleEnergy = false;
         }
 
-        if (Energy > 0 && !ToggleEnergy)
+        if (energy > 0 && !ToggleEnergy)
         {
             if (timeBetweenEnergyloss > 0)
             {
@@ -71,19 +74,19 @@ public class Building : MonoBehaviour
             }
             else
             {
-                Energy -= energyLostPerSecond;
+                energy -= energyLostPerTick;
                 timeBetweenEnergyloss = startEnergyLossRate;
             }
         }
 
-        EnergyBar.fillAmount = Energy / maxEnergy;
+        EnergyBar.fillAmount = energy / maxEnergy;
     }
 
 
-
+    //Takes energy (value of changeEnergy) from the Game manager and adds it to the Building.
     public void increaseBuildingEnergy()
     {
-        if (Energy < maxEnergy)
+        if (energy < maxEnergy)
         {
             if (timeBetweenEnergyGain > 0)
             {
