@@ -8,8 +8,11 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Building.cs" t="Include" />
+          <e p="Dialog.cs" t="Include" />
+          <e p="DialogueQue.cs" t="Include" />
           <e p="EnergyMain.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="StoryDialogueManager.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />
