@@ -12,7 +12,7 @@ public class DialogueQue : MonoBehaviour
     public AudioSource audioS;
     private bool isPlaying;
     private float duration = 0;
-    
+
     
     //tests
     public Dialog test_1;

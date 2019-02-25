@@ -6,6 +6,23 @@ using UnityEngine.UI;
 
 public class Building : MonoBehaviour
 {
+
+    public enum Status
+    {
+        Low = 0,
+        High = 1
+    };
+
+    public enum Morale
+    {
+        Low = 0,
+        Medium = 1,
+        High = 2
+    };
+
+    public Morale currMorale;
+    public Status prev = Status.High;
+    public Status curr = Status.High;
     
     public float energy = 0f; // how much energy this building currently has
     
@@ -21,6 +38,10 @@ public class Building : MonoBehaviour
 
     public float timeBetweenEnergyGain;
     private float startEnergyGainRate;
+    
+    //Moral for the person in the building
+    public float moral;
+    private float maxMoral;
 
     //Rate at which the energy is lost per the value of time between energy lost
     public float energyLostPerTick;
@@ -88,6 +109,7 @@ public class Building : MonoBehaviour
         
         
         
+        
         if (ToggleEnergy)
         {
             increaseBuildingEnergy();
@@ -112,8 +134,28 @@ public class Building : MonoBehaviour
         }
 
         EnergyBar.fillAmount = energy / maxEnergy;
+
+
+        if (energy / maxEnergy < 0.5)
+        {
+            prev = curr;
+            curr = Status.Low;
+        }
+        else if(energy / maxEnergy >= 0.5)
+        {
+            prev = curr;
+            curr = Status.High;
+        }
+
+        checkMorale();
+
     }
 
+    public void checkMorale()
+    {
+        // checl conditions, see if morale state needs to be changed
+        currMorale = Morale.High;
+    }
 
     //Takes energy (value of changeEnergy) from the Game manager and adds it to the Building.
     public void increaseBuildingEnergy()
@@ -132,13 +174,5 @@ public class Building : MonoBehaviour
         }
     }
 
-//    public void releaseEnergy()
-//    {
- //       if (Energy > 0)
- //       {
- //           Energy -= 10f;
-//            gameManager.addEnergy(changeEnergy, this);
-//        }
-//    }
     
 }
