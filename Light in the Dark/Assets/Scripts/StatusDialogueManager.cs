@@ -12,9 +12,9 @@ public class StatusDialogueManager : MonoBehaviour
     public Building engineer;
     public Building researcher;
 
-    public Dialog[][] nurseDialog;
-    public Dialog[][] engineerDialog;
-    public Dialog[][] researcherDialog;
+    public Dialog[][] nurseDialog = new Dialog[3][];
+    public Dialog[][] engineerDialog = new Dialog[3][];
+    public Dialog[][] researcherDialog = new Dialog[3][];
 
 
     public float nurseCooldown = 5f;
@@ -26,17 +26,17 @@ public class StatusDialogueManager : MonoBehaviour
     public float researcherCooldown = 5f;
     private float startResearcherCooldown;
 
-    public Dialog[] nurseHigh;
-    public Dialog[] nurseMid;
-    public Dialog[] nurseLow;
+    public Dialog[] nurseHigh = new Dialog[2];
+    public Dialog[] nurseMid = new Dialog[2];
+    public Dialog[] nurseLow = new Dialog[2];
 
-    public Dialog[] engineerHigh;
-    public Dialog[] engineerMid;
-    public Dialog[] engineerLow;
+    public Dialog[] engineerHigh = new Dialog[2];
+    public Dialog[] engineerMid = new Dialog[2];
+    public Dialog[] engineerLow = new Dialog[2];
 
-    public Dialog[] researcherHigh;
-    public Dialog[] researcherMid;
-    public Dialog[] researcherLow;
+    public Dialog[] researcherHigh = new Dialog[2];
+    public Dialog[] researcherMid = new Dialog[2];
+    public Dialog[] researcherLow = new Dialog[2];
 
     
     // Start is called before the first frame update
@@ -50,6 +50,7 @@ public class StatusDialogueManager : MonoBehaviour
         engineerCooldown = 0f;
         nurseCooldown = 0f;
 
+        Debug.Log("Loading dialogue...");
         nurseDialog[0] = nurseLow;
         nurseDialog[1] = nurseMid;
         nurseDialog[2] = nurseHigh;
@@ -63,15 +64,16 @@ public class StatusDialogueManager : MonoBehaviour
         researcherDialog[1] = researcherMid;
         researcherDialog[2] = researcherHigh;
         
-
+        Debug.Log(nurseDialog[0][0].subtitle);
         dQ.dialogQ.Enqueue(nurseDialog[0][0]);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (nurse.prev != nurse.curr && nurseCooldown < 0) //change in state
+        // If nurse's energy-state has changed, and our cooldown has ended,
+        // we send appropriate dialogue to the queue.
+        if (nurse.prev != nurse.curr && nurseCooldown < 0)
         {
             /*
 
@@ -85,8 +87,9 @@ public class StatusDialogueManager : MonoBehaviour
                 dQ.dialogQ.Enqueue(nurseDialog[1]);
             }
             */
+
             
-            dQ.dialogQ.Enqueue(nurseDialog[(int)nurse.currMorale][(int)nurse.curr]);
+            //dQ.dialogQ.Enqueue(nurseDialog[(int)nurse.curr_morale][(int)nurse.curr]);
             nurseCooldown = startNurseCooldown;
         }
         else

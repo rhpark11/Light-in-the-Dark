@@ -20,7 +20,7 @@ public class Building : MonoBehaviour
         High = 2
     };
 
-    public Morale currMorale;
+    public Morale curr_morale;
     public Status prev = Status.High;
     public Status curr = Status.High;
     
@@ -154,7 +154,7 @@ public class Building : MonoBehaviour
     public void checkMorale()
     {
         // checl conditions, see if morale state needs to be changed
-        currMorale = Morale.High;
+        curr_morale = Morale.High;
     }
 
     //Takes energy (value of changeEnergy) from the Game manager and adds it to the Building.
