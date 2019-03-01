@@ -153,7 +153,7 @@ public class Building : MonoBehaviour
 
     public void checkMorale()
     {
-        // checl conditions, see if morale state needs to be changed
+        // check conditions, see if morale state needs to be changed
         currMorale = Morale.High;
     }
 

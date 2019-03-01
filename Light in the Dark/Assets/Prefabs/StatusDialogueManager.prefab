@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &7086823746210032897
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7086823746210032903}
+  - component: {fileID: 7086823746210032896}
+  m_Layer: 0
+  m_Name: StatusDialogueManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7086823746210032903
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7086823746210032897}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.259887, y: -3.224388, z: 12.65362}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7086823746210032896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7086823746210032897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 94536637b946f2a4cbd063c8d7561286, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dQ: {fileID: 0}
+  nurse: {fileID: 0}
+  engineer: {fileID: 0}
+  researcher: {fileID: 0}
+  nurseCooldown: 15
+  engineerCooldown: 15
+  researcherCooldown: 15
+  nurseHigh:
+  - audio: {fileID: 8300000, guid: 7e3724f2269830945a8c74e163d5f952, type: 3}
+    subtitle: 
+    silence: 0
+    pan: 0
+  - audio: {fileID: 8300000, guid: 6fa9ddd1e7a615849b3706cd0054537a, type: 3}
+    subtitle: 
+    silence: 0
+    pan: 0
+  nurseMid:
+  - audio: {fileID: 8300000, guid: 6fa9ddd1e7a615849b3706cd0054537a, type: 3}
+    subtitle: 
+    silence: 0
+    pan: 0
+  - audio: {fileID: 8300000, guid: 7e3724f2269830945a8c74e163d5f952, type: 3}
+    subtitle: 
+    silence: 0
+    pan: 0
+  nurseLow:
+  - audio: {fileID: 8300000, guid: 7e3724f2269830945a8c74e163d5f952, type: 3}
+    subtitle: 
+    silence: 0
+    pan: 0
+  - audio: {fileID: 8300000, guid: 6fa9ddd1e7a615849b3706cd0054537a, type: 3}
+    subtitle: 
+    silence: 0
+    pan: 0
+  engineerHigh:
+  - audio: {fileID: 0}
+    subtitle: 
+    silence: 0
+    pan: 0
+  - audio: {fileID: 0}
+    subtitle: 
+    silence: 0
+    pan: 0
+  engineerMid: []
+  engineerLow: []
+  researcherHigh: []
+  researcherMid: []
+  researcherLow: []

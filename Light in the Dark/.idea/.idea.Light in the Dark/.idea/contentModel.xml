@@ -8,12 +8,16 @@
       <e p="Assets" t="Include">
         <e p="Scripts" t="Include">
           <e p="Building.cs" t="Include" />
+          <e p="ButtonManager.cs" t="Include" />
           <e p="Dialog.cs" t="Include" />
           <e p="DialogueQue.cs" t="Include" />
+          <e p="EnergyBar.cs" t="Include" />
           <e p="EnergyMain.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
           <e p="StatusDialogueManager.cs" t="Include" />
           <e p="StoryDialogueManager.cs" t="Include" />
+          <e p="Timer.cs" t="Include" />
+          <e p="TonyEventTest.cs" t="Include" />
         </e>
       </e>
       <e p="Library" t="ExcludeRecursive" />

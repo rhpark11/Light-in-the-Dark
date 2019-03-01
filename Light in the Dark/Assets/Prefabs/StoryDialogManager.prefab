@@ -1,0 +1,64 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2539444057540115031
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2539444057540115029}
+  - component: {fileID: 2539444057540115030}
+  m_Layer: 0
+  m_Name: StoryDialogManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2539444057540115029
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2539444057540115031}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.259887, y: -3.224388, z: 12.65362}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2539444057540115030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2539444057540115031}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82651b18ca374024b89095b0776752b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dQ: {fileID: 0}
+  nurse:
+  - audio: {fileID: 8300000, guid: 6fa9ddd1e7a615849b3706cd0054537a, type: 3}
+    subtitle: 
+    silence: 0
+    pan: 0
+  engineer:
+  - audio: {fileID: 8300000, guid: 7e3724f2269830945a8c74e163d5f952, type: 3}
+    subtitle: 
+    silence: 0
+    pan: 0
+  researcher:
+  - audio: {fileID: 8300000, guid: f5ade6c24ceec48449dd140e225ce3fc, type: 3}
+    subtitle: 
+    silence: 0
+    pan: 0
+  delay_min: 10
+  delay_max: 20
+  delay: 0

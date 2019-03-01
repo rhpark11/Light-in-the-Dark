@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
@@ -17,8 +18,9 @@ public class GameManager : MonoBehaviour
     
     public float timeBetweenEnergyGain;
     private float startTimebetweenEnergyGain;
-   
-    
+
+    public Building thermal;
+    public string thermalEndScene;
     
     void Start()
     {
@@ -62,6 +64,11 @@ public class GameManager : MonoBehaviour
         {
             timeBetweenEnergyGain -= Time.deltaTime;
         }
+
+        if (thermal.energy <= 0)
+        {
+            SceneManager.LoadScene(thermalEndScene);
+        }
         
     }
 
@@ -91,19 +98,5 @@ public class GameManager : MonoBehaviour
         
     }
 
-    //Not being used in the game.
- //   public void addEnergy(float dEnergy, Building building)
- //   {
- //      if (dEnergy + building.Energy > building.maxEnergy)
- //       {
- //           dEnergy = building.maxEnergy - building.Energy;
- //           Energy += dEnergy;
- //       }
- //       else
- //       {
- //           Energy += dEnergy;
- //       }
 
- //   }
-    
 }
