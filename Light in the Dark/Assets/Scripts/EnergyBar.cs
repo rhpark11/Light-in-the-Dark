@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 public class EnergyBar : MonoBehaviour
 {
-    public float value = 0.3f;
+    public float value = 0.9f;
     private Transform bar;
 
     void Start(){
@@ -14,16 +14,9 @@ public class EnergyBar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.UpArrow)){
-            value += 0.1f;
-        }
-
-        if(Input.GetKeyDown(KeyCode.DownArrow)){
-            Debug.Log("DOWN");
-            value -= 0.1f;
-        }
-
-        bar.transform.localScale = new Vector3(value, 1,1);
+        // I could go change the art ORRRRR     |
+        // I could change a line of code!       V
+        bar.transform.localScale = new Vector3(1 - value, 1,1);
     }
 
     //amt should be [0,1]

@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
         
         //Gaining energy per time specified in the variable timeBetweenEnergyGain
         
-
+        //updateEnergy();
         if (timeBetweenEnergyGain <= 0 && energy < maxEnergy)
         {
             if (energyRegenRate + energy > maxEnergy)
@@ -98,5 +98,38 @@ public class GameManager : MonoBehaviour
         
     }
 
+    private void updateEnergy()
+    {
+        if (timeBetweenEnergyGain <= 0 && energy < maxEnergy)
+        {
+            if (energyRegenRate + energy > maxEnergy)
+            {
+                energy = maxEnergy;
+            }
+            else
+            {
+                energy += energyRegenRate;
+            }
+                
+            timeBetweenEnergyGain = startTimebetweenEnergyGain;
+        }
+        else
+        {
+            timeBetweenEnergyGain -= Time.deltaTime;
+        }
+    }
+
+    //Not being used in the game.
+ //   public void addEnergy(float dEnergy, Building building)
+ //   {
+ //      if (dEnergy + building.Energy > building.maxEnergy)
+ //       {
+ //           dEnergy = building.maxEnergy - building.Energy;
+ //           Energy += dEnergy;
+ //       }
+ //       else
+ //       {
+ //           Energy += dEnergy;
+ //       }
 
 }
