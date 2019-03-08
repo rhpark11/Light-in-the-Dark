@@ -10,17 +10,11 @@ public class Building : MonoBehaviour
     public enum Status
     {
         Low = 0,
-        High = 1
-    };
-
-    public enum Morale
-    {
-        Low = 0,
         Medium = 1,
         High = 2
     };
 
-    public Morale curr_morale;
+
     public Status prev = Status.High;
     public Status curr = Status.High;
     
@@ -77,37 +71,6 @@ public class Building : MonoBehaviour
 
        }
         
-//        if (Input.GetMouseButton(0))
-//        {
-//
-//            Vector3 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-//
-//
-//            if (buildingHitBox.OverlapPoint(mp))
-//            {
-//                ToggleEnergy = true;
-//            }
-//            else
-//            {
-//                ToggleEnergy = false;
-//            }
-//
-//        }
-//        // toggle true when player holds button down
-//        if (Input.GetMouseButtonUp(0))
-//        {
-//
-//            Vector3 mp = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-//
-//
-//            if (buildingHitBox.OverlapPoint(mp))
-//            {
-//                ToggleEnergy = false;
-//            }
-//
-//        }
-        
-        
         
         
         if (ToggleEnergy)
@@ -136,25 +99,27 @@ public class Building : MonoBehaviour
         EnergyBar.fillAmount = energy / maxEnergy;
 
 
-        if (energy / maxEnergy < 0.5)
-        {
-            prev = curr;
-            curr = Status.Low;
-        }
-        else if(energy / maxEnergy >= 0.5)
+        if (energy / maxEnergy > 0.66f)
         {
             prev = curr;
             curr = Status.High;
+            EnergyBar.color = Color.green;
+        }
+        else if(energy / maxEnergy >= 0.33f && energy / maxEnergy <= 0.66f)
+        {
+            prev = curr;
+            curr = Status.Medium;
+            EnergyBar.color = Color.blue;
+
+        }
+        else if(energy / maxEnergy < 0.33f)
+        {
+            prev = curr;
+            curr = Status.Low;
+            EnergyBar.color = Color.red;
+
         }
 
-        checkMorale();
-
-    }
-
-    public void checkMorale()
-    {
-        // checl conditions, see if morale state needs to be changed
-        curr_morale = Morale.High;
     }
 
     //Takes energy (value of changeEnergy) from the Game manager and adds it to the Building.

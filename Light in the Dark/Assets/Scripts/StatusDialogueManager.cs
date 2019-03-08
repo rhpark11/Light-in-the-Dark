@@ -65,7 +65,14 @@ public class StatusDialogueManager : MonoBehaviour
         researcherDialog[2] = researcherHigh;
         
         Debug.Log(nurseDialog[0][0].subtitle);
-        dQ.dialogQ.Enqueue(nurseDialog[0][0]);
+//        dQ.dialogQ.Enqueue(nurseDialog[0][1]);
+//        dQ.dialogQ.Enqueue(nurseDialog[0][2]);
+//        dQ.dialogQ.Enqueue(nurseDialog[0][3]);
+        nurseCooldown = startNurseCooldown;
+        engineerCooldown = startEngineerCooldown;
+        researcherCooldown = startResearcherCooldown;
+
+
     }
 
     // Update is called once per frame
@@ -75,19 +82,22 @@ public class StatusDialogueManager : MonoBehaviour
         // we send appropriate dialogue to the queue.
         if (nurse.prev != nurse.curr && nurseCooldown < 0)
         {
-            /*
+            
 
             if (nurse.curr == Building.Status.Low)
             {
                 // send low status audio to queue
-                dQ.dialogQ.Enqueue(nurseDialog[0][energyIndex]);
+                dQ.dialogQ.Enqueue(nurseDialog[0][0]);
             }
-            else
+            else if (nurse.curr == Building.Status.Medium)
             {
-                dQ.dialogQ.Enqueue(nurseDialog[1]);
+                dQ.dialogQ.Enqueue(nurseDialog[1][0]);
             }
-            */
+            else if (nurse.curr == Building.Status.High)
+            {
+                dQ.dialogQ.Enqueue(nurseDialog[2][0]);
 
+            }
             
             //dQ.dialogQ.Enqueue(nurseDialog[(int)nurse.curr_morale][(int)nurse.curr]);
             nurseCooldown = startNurseCooldown;
@@ -103,16 +113,17 @@ public class StatusDialogueManager : MonoBehaviour
             if (engineer.curr == Building.Status.Low)
             {
                 // send low status audio to queue
-                //dQ.dialogQ.Enqueue(engineerDialog[0]);
-
+                dQ.dialogQ.Enqueue(engineerDialog[0][0]);
             }
-            else
+            else if (engineer.curr == Building.Status.Medium)
             {
-                //send high status audio to queue
-                //dQ.dialogQ.Enqueue(engineerDialog[1]);
+                dQ.dialogQ.Enqueue(engineerDialog[1][0]);
+            }
+            else if (engineer.curr == Building.Status.High)
+            {
+                dQ.dialogQ.Enqueue(engineerDialog[2][0]);
 
             }
-
             engineerCooldown = startEngineerCooldown;
         }
         else
@@ -126,14 +137,15 @@ public class StatusDialogueManager : MonoBehaviour
             if (researcher.curr == Building.Status.Low)
             {
                 // send low status audio to queue
-                //dQ.dialogQ.Enqueue(researcherDialog[0]);
-
+                dQ.dialogQ.Enqueue(researcherDialog[0][0]);
             }
-            else
+            else if (researcher.curr == Building.Status.Medium)
             {
-                //send high status audio to queue
-                //dQ.dialogQ.Enqueue(researcherDialog[1]);
-
+                dQ.dialogQ.Enqueue(researcherDialog[1][0]);
+            }
+            else if (researcher.curr == Building.Status.High)
+            {
+                dQ.dialogQ.Enqueue(researcherDialog[2][0]);
             }
 
             researcherCooldown = startResearcherCooldown;
