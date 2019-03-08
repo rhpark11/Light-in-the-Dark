@@ -44,6 +44,11 @@ public class Building : MonoBehaviour
     public Image EnergyBar;
 
     public bool ToggleEnergy = false;
+    
+    public Color barLow;
+    public Color barMid;
+    public Color barHigh;
+
 
     private Collider2D buildingHitBox;
     void Start()
@@ -103,22 +108,34 @@ public class Building : MonoBehaviour
         {
             prev = curr;
             curr = Status.High;
-            EnergyBar.color = Color.green;
         }
         else if(energy / maxEnergy >= 0.33f && energy / maxEnergy <= 0.66f)
         {
             prev = curr;
             curr = Status.Medium;
-            EnergyBar.color = Color.blue;
 
         }
         else if(energy / maxEnergy < 0.33f)
         {
             prev = curr;
             curr = Status.Low;
-            EnergyBar.color = Color.red;
+        }
+        
+        if (energy / maxEnergy > 0.4f)
+        {
+            EnergyBar.color = barHigh;
+        }
+        else if(energy / maxEnergy >= 0.2f && energy / maxEnergy <= 0.4f)
+        {
+         
+            EnergyBar.color = barMid;
 
         }
+        else
+        {
+            EnergyBar.color = barLow;
+        }
+        Debug.Log(EnergyBar.color);
 
     }
 

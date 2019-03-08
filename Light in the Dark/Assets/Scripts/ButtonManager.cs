@@ -9,4 +9,9 @@ public class ButtonManager : MonoBehaviour
     {
         SceneManager.LoadScene(scene);
     }
+
+    public void ResearchVictory()
+    {
+        // pass
+    }
 }
