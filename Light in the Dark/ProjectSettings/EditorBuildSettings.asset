@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: 
     guid: 00000000000000000000000000000000
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 6541acff4562d4fbfaa9e44da2c77779
+  - enabled: 1
     path: Assets/Scenes/Omar.unity
     guid: fcc500f024509c047b2dcce13fc14a3a
   - enabled: 1
@@ -20,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndingThermal.unity
     guid: 9bc561de8613f614db2895901460f550
+  - enabled: 1
+    path: Assets/Scenes/ResearchEnding.unity
+    guid: 091d9641ef839004395dae4d08a36ebd
   m_configObjects: {}

@@ -24,6 +24,7 @@
           <e p="MedbayHealth.cs" t="Include" />
           <e p="PostProcess.cs" t="Include" />
           <e p="ResearchProgress.cs" t="Include" />
+          <e p="SceneSwitcher.cs" t="Include" />
           <e p="StatusDialogueManager.cs" t="Include" />
           <e p="StoryDialogueManager.cs" t="Include" />
           <e p="Timer.cs" t="Include" />

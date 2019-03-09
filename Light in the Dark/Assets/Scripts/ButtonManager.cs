@@ -10,8 +10,8 @@ public class ButtonManager : MonoBehaviour
         SceneManager.LoadScene(scene);
     }
 
-    public void ResearchVictory()
+    public void ResearchVictory(string scene)
     {
-        // pass
+        SceneManager.LoadScene(scene);
     }
 }

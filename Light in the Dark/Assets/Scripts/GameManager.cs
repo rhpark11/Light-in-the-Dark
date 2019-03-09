@@ -14,13 +14,19 @@ public class GameManager : MonoBehaviour
     public float maxEnergy;
     
     public float energyRegenRate = 1f;
+    public Transform buttonLocation;
 
     
     public float timeBetweenEnergyGain;
     private float startTimebetweenEnergyGain;
 
     public Building thermal;
+    public ResearchProgress research;
+    public GameObject researchButton;
+    public string researchEnding;
+    
     public string thermalEndScene;
+    private bool barSpawned = false;
     
     void Start()
     {
@@ -68,6 +74,12 @@ public class GameManager : MonoBehaviour
         if (thermal.energy <= 0)
         {
             SceneManager.LoadScene(thermalEndScene);
+        }
+
+        if (research.research_credits == research.max_credits && !barSpawned )
+        {
+            Instantiate(researchButton, buttonLocation);
+            barSpawned = true;
         }
         
     }
