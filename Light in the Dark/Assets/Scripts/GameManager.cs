@@ -131,17 +131,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    //Not being used in the game.
- //   public void addEnergy(float dEnergy, Building building)
- //   {
- //      if (dEnergy + building.Energy > building.maxEnergy)
- //       {
- //           dEnergy = building.maxEnergy - building.Energy;
- //           Energy += dEnergy;
- //       }
- //       else
- //       {
- //           Energy += dEnergy;
- //       }
+    public void enableResearchWin(){
+        // Once the state in ResearchProgress is reached, we can enable the research button.
+        researchButton.SetActive(true);
+    }
 
 }

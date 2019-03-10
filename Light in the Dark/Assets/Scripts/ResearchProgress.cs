@@ -11,9 +11,9 @@ public class ResearchProgress : MonoBehaviour
     // The point wher research commences/stops
     public float _energy_threshold = 85f;
     public int research_credits = 1;
-    public int max_credits = 3;
+    public int max_credits = 5;
 
-    public GameObject[] credits = new GameObject[3];
+    public GameObject[] credits = new GameObject[5];
 
     public Building _parent;
     public EnergyBar _bar;
@@ -38,7 +38,12 @@ public class ResearchProgress : MonoBehaviour
             // spendable
             if(research_credits < max_credits){
                 research_credits += 1;
+                //TODO play a "credit earned" sound
                 updateCreditDisplay();
+                
+                if(research_credits == max_credits){
+                    gm.enableResearchWin();
+                }
             }
             
             // if I have time I want to implement a snazzy
