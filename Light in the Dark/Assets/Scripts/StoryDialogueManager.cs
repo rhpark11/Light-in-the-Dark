@@ -32,8 +32,8 @@ public class StoryDialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        characters[0] = nurse;
-        characters[1] = engineer;
+        characters[0] = engineer;
+        characters[1] = nurse;
         characters[2] = researcher;
     }
 
@@ -50,10 +50,6 @@ public class StoryDialogueManager : MonoBehaviour
                 index_array[character_index]++;
                 delay = Random.Range(delay_min, delay_max);
             }
-            
-            
-            
-            
             
             character_index++;
             character_index = character_index % 3;

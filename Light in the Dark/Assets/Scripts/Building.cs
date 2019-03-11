@@ -14,6 +14,8 @@ public class Building : MonoBehaviour
         High = 2
     };
 
+    public SpriteRenderer[] lines;
+
 
     public Status prev = Status.High;
     public Status curr = Status.High;
@@ -44,10 +46,14 @@ public class Building : MonoBehaviour
     public Image EnergyBar;
 
     public bool ToggleEnergy = false;
+    public AudioSource lowEnergyAlarm;
     
     public Color barLow;
     public Color barMid;
     public Color barHigh;
+
+    private float alarmCooldown = 5f;
+    private float startalarmCooldown;
 
 
     private Collider2D buildingHitBox;
@@ -62,6 +68,7 @@ public class Building : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        alarmCooldown -= Time.deltaTime;
         // If the player clicks on the buildings 2D collider it will toggle from giving energy to not giving energy.
         if (Input.GetMouseButtonDown(0))
         {
@@ -113,17 +120,25 @@ public class Building : MonoBehaviour
         {
             prev = curr;
             curr = Status.Medium;
+            if (lowEnergyAlarm.isPlaying == true)
+            {
+                lowEnergyAlarm.Stop();
+            }
 
         }
         else if(energy / maxEnergy < 0.33f)
         {
             prev = curr;
             curr = Status.Low;
+
         }
         
+        
+
         if (energy / maxEnergy > 0.4f)
         {
             EnergyBar.color = barHigh;
+
         }
         else if(energy / maxEnergy >= 0.2f && energy / maxEnergy <= 0.4f)
         {
@@ -134,8 +149,31 @@ public class Building : MonoBehaviour
         else
         {
             EnergyBar.color = barLow;
+            if (lowEnergyAlarm.isPlaying || alarmCooldown > 0f)
+            {
+                return;
+            
+            }
+            lowEnergyAlarm.Play();
+            alarmCooldown = 5f;
         }
-        Debug.Log(EnergyBar.color);
+
+        if (ToggleEnergy)
+        {
+            foreach (var line in lines)
+            {
+                line.color = Color.yellow;
+            }
+
+        }
+        else
+        {
+            foreach (var line in lines)
+            {
+                line.color = Color.black;
+            }
+
+        }
 
     }
 
