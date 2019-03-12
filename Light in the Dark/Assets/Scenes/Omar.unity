@@ -5272,6 +5272,158 @@ PrefabInstance:
       propertyPath: researcher.Array.data[9].speaker
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: nurse.Array.data[0].subtitle
+      value: Dr. Gibson to Power. Those injured in the Accident are stable for now,
+        but we need more power to keep them that way. It's not just Captain Isabel,
+        everyone here is loved by someone. We need to try to keep them alive. I need
+        to try to keep him alive... Please.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: nurse.Array.data[1].subtitle
+      value: Daedalus? Pah, Dr. Guy Falk doesn't give a flying...well, he doesn't
+        care about anyone but himself.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: nurse.Array.data[2].subtitle
+      value: Did anyone love him? Did he ever love another? Guy sure doesn't show
+        it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: nurse.Array.data[3].subtitle
+      value: I didn't want him to come on this journey.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: nurse.Array.data[4].subtitle
+      value: My brother, Bobby Gibson, is a Class A idiot.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: nurse.Array.data[5].subtitle
+      value: '"Oh, I''m going to go to space and help research god knows what," he
+        says.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: nurse.Array.data[6].subtitle
+      value: And now he's in critical condition, just like the Captain. Just like
+        us if we don't get help soon.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: nurse.Array.data[7].subtitle
+      value: So yes, I'm a little bitter that Guy would throw away one of his aides
+        for the sake of some "legacy".
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: engineer.Array.data[1].subtitle
+      value: Have I told you about my family? Heh, probably not the best time to get
+        emotional about it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: engineer.Array.data[2].subtitle
+      value: My son, he cries every time we ship out. I tell him to give me a big
+        smile before I go, but I usually end up crying with him.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: engineer.Array.data[3].subtitle
+      value: My daughter tries to put on a brave face when I leave, bless her heart.
+        We aren't a military unit, but she always salutes to say goodbye.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: engineer.Array.data[4].subtitle
+      value: Lena, my girl, she wants to work in space someday. Maybe she'll have
+        your job, she's got a knack for organization. I...I might never see that happen.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: engineer.Array.data[5].subtitle
+      value: Marcy always joked I was no good with my hands. Jokes on her now. I've
+        been carving little keepsakes for the kids when I get home. If I get home.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: engineer.Array.data[6].subtitle
+      value: My wife says I'm good at running my mouth. Sorry for taking up the comm
+        lines with my life story. It's just, it helps, you know?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: researcher.Array.data[0].subtitle
+      value: Daedalus from Research. Let us not forget why we are here. Like our bodies,
+        this vessel is temporary. Surely, we shall perish, but there is hope. Humanity
+        is frail, but knowledge, knowledge transcends form. Give me power, let me
+        finish my research, let them remember my name long after our wings melt and
+        we become naught but stardust.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: researcher.Array.data[1].subtitle
+      value: Why was I given the name Daedalus? An estute observation. Daedalus was
+        an artist, a thinker. He took imagination and made it into raw essence, gave
+        it form. I aspire to do the same.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: researcher.Array.data[2].subtitle
+      value: Space travel is the marvel of this century, the era of man going beyond
+        the skies and into the heavens. But it is not perfect. Our current predicament
+        is a testiment to that fact.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: researcher.Array.data[3].subtitle
+      value: We have gained wings, but it is not enough for me. No, I wish not just
+        to fly, but to soar!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: researcher.Array.data[4].subtitle
+      value: What? Of course my name is Daedalus. Guy? Where did you hear that name?!
+        Who told you?!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: researcher.Array.data[5].subtitle
+      value: What is my research, you ask? I work on many projects, of course. My
+        Magnum Opus, however, will be what I call the Wayfiber.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: researcher.Array.data[6].subtitle
+      value: With this technology, we will be able to trace any and every vessel in
+        the galaxy. We can find new planets, new life!
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: researcher.Array.data[7].subtitle
+      value: With this, we could find any ship lost in the vast expanse of space.
+        I could find her. My mother. No one would have to lose a loved one in space
+        again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: researcher.Array.data[8].subtitle
+      value: Her ship was damaged, we lost track of them somewhere out here. We sent
+        a search party, but ships drift in space. With no power, we couldn't track
+        it.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: researcher.Array.data[9].subtitle
+      value: This station is large, anchored to a celestial body. Eventually, if they
+        do arrive, the SOS Party will find us. What is left of us. And if I finish,
+        tragedies like this, tragedies like my mother won't have to happen again.
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47f06e8a24682bc44a4f3fdcf364a4bc, type: 3}
 --- !u!1001 &5809185640791040750
@@ -5599,6 +5751,53 @@ PrefabInstance:
         type: 3}
       propertyPath: researcherLow.Array.data[0].speaker
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086823746210032896, guid: 513fd6435d4f5634a99f0848841baf8d,
+        type: 3}
+      propertyPath: researcherLow.Array.data[0].subtitle
+      value: We don't even know if rescue will arrive in time. You want hope? Hope
+        is what I offer, but only if I have the energy to power my laboratory.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086823746210032896, guid: 513fd6435d4f5634a99f0848841baf8d,
+        type: 3}
+      propertyPath: researcherMid.Array.data[0].subtitle
+      value: The Research Lab is stable, and my work is coming along.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086823746210032896, guid: 513fd6435d4f5634a99f0848841baf8d,
+        type: 3}
+      propertyPath: researcherHigh.Array.data[0].subtitle
+      value: The Research Lab is nearly at full power! We are getting so close!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086823746210032896, guid: 513fd6435d4f5634a99f0848841baf8d,
+        type: 3}
+      propertyPath: engineerLow.Array.data[0].subtitle
+      value: Energy's almost out. So this is how we go out into the night.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086823746210032896, guid: 513fd6435d4f5634a99f0848841baf8d,
+        type: 3}
+      propertyPath: engineerMid.Array.data[0].subtitle
+      value: Energy seems stable for now. Keep it up.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086823746210032896, guid: 513fd6435d4f5634a99f0848841baf8d,
+        type: 3}
+      propertyPath: engineerHigh.Array.data[0].subtitle
+      value: Thermal's almost at full power. You're doing good out there. At this
+        rate, we might just see our families again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086823746210032896, guid: 513fd6435d4f5634a99f0848841baf8d,
+        type: 3}
+      propertyPath: nurseLow.Array.data[0].subtitle
+      value: 'Medbay energy is running out here! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086823746210032896, guid: 513fd6435d4f5634a99f0848841baf8d,
+        type: 3}
+      propertyPath: nurseMid.Array.data[0].subtitle
+      value: Medbay at stable energy.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7086823746210032896, guid: 513fd6435d4f5634a99f0848841baf8d,
+        type: 3}
+      propertyPath: nurseHigh.Array.data[0].subtitle
+      value: Medbay near full power. Everyone's stable for now.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 513fd6435d4f5634a99f0848841baf8d, type: 3}
