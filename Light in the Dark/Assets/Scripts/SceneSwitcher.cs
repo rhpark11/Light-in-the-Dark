@@ -6,10 +6,13 @@ public class SceneSwitcher : MonoBehaviour
 {
 
     public string scene_name;
-    // Start is called before the first frame update
+    public Fading f;
 
-    // Update is called once per frame
     public void loadScene(){
         UnityEngine.SceneManagement.SceneManager.LoadScene(scene_name);
+    }
+
+    public void fadeIntoScene(){
+        f.LoadSceneAsync(scene_name);
     }
 }
