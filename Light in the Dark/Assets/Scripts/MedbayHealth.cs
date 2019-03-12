@@ -16,8 +16,13 @@ public class MedbayHealth : MonoBehaviour
     public Building _parent;
     public EnergyBar _bar;
     public GameManager gm;
+    public AudioSource audioS;
+    public Dialog sadNurse;
+
+    public DialogueQue dQ;
     void Start()
     {
+        audioS = GetComponent<AudioSource>();
         _parent = GetComponent<Building>();
     }
 
@@ -33,6 +38,8 @@ public class MedbayHealth : MonoBehaviour
             _health = 0;
             // change some flag or boolean in GM
             Debug.Log("Press F for respects");
+            dQ.dialogQ.Enqueue(sadNurse);
+            audioS.Play();
         }
 
         _bar.set(_health/_MAX_HEALTH);

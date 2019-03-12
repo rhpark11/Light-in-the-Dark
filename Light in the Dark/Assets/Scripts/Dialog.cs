@@ -13,6 +13,9 @@ public class Dialog
     public float silence;
     [Range(-1.0f, 1.0f)]
     public float pan;
+    
+    // engineer = 0; nurse = 1; researcher = 2
+    public int speaker;
 
     public void DialogConstructor(AudioClip ac, string s, float time = 0, float p = 0)
     {

@@ -51,6 +51,8 @@ public class StoryDialogueManager : MonoBehaviour
                 delay = Random.Range(delay_min, delay_max);
             }
             
+            
+            // display portriate
             character_index++;
             character_index = character_index % 3;
          

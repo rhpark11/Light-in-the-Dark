@@ -12,6 +12,8 @@ public class DialogueQue : MonoBehaviour
     public AudioSource audioS;
     private bool isPlaying;
     private float duration = 0;
+    public PictureManager pm;
+
 
     
     //tests
@@ -41,6 +43,7 @@ public class DialogueQue : MonoBehaviour
             Dialog currentDialog = dialogQ.Dequeue();
             audioS.clip = currentDialog.audio;
             audioS.panStereo = currentDialog.pan;
+            pm.switchPic(currentDialog.speaker);
             string subs = currentDialog.subtitle;
             duration = audioS.clip.length + currentDialog.silence;
             Debug.Log(subs);

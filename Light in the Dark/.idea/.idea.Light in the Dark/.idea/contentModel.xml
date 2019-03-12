@@ -6,6 +6,7 @@
     <e p="D:\Projects\Light-in-the-Dark\Light in the Dark" t="IncludeRecursive">
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
+        <e p="PictureManager.cs" t="Include" />
         <e p="Pixelation" t="Include">
           <e p="Readme.txt" t="Include" />
           <e p="Shaders" t="Include">
