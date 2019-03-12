@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ba0e99a0-dca2-4915-b785-9583f2829a68" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Art Assets/Medbay placeholder icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art Assets/Medbay placeholder icon.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art Assets/Research facility placeholder.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art Assets/Research facility placeholder.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Art Assets/temperature-in-png-5.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Art Assets/temperature-in-png-5.png.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/HexContainer.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/HexContainer.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/ResearchVictoryButton.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/ResearchVictoryButton.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Omar.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Omar.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Building.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Building.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/StoryDialogueManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/StoryDialogueManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/DialogueQue.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/DialogueQue.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -37,12 +30,12 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cs" value="9939" />
+          <entry key="cs" value="9950" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="C#" value="9939" />
+          <entry key="C#" value="9950" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -154,19 +147,19 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/DialogueQue.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
+            <state relative-caret-position="435">
+              <caret line="44" column="66" lean-forward="true" selection-start-line="44" selection-start-column="66" selection-end-line="44" selection-end-column="66" />
               <folding>
-                <marker date="1551050125128" expanded="true" signature="6:149" ph="..." />
-                <marker date="1551050125128" expanded="true" signature="191:1229" ph="{...}" />
-                <marker date="1551050125128" expanded="true" signature="439:568" ph="{...}" />
-                <marker date="1551050125128" expanded="true" signature="500:561" ph="/* dialogQ.Enqueue(test_1); ... */" />
-                <marker date="1551050125128" expanded="true" signature="626:1227" ph="{...}" />
-                <marker date="1551050125128" expanded="true" signature="694:745" ph="{...}" />
-                <marker date="1551050125128" expanded="true" signature="791:1195" ph="{...}" />
+                <marker date="1552352092989" expanded="true" signature="6:149" ph="..." />
+                <marker date="1552352092989" expanded="true" signature="191:1258" ph="{...}" />
+                <marker date="1552352092989" expanded="true" signature="439:568" ph="{...}" />
+                <marker date="1552352092989" expanded="true" signature="500:561" ph="/* dialogQ.Enqueue(test_1); ... */" />
+                <marker date="1552352092989" expanded="true" signature="626:1256" ph="{...}" />
+                <marker date="1552352092989" expanded="true" signature="694:745" ph="{...}" />
+                <marker date="1552352092989" expanded="true" signature="791:1224" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -242,10 +235,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/StoryDialogueManager.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
+            <state relative-caret-position="443">
               <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
               <folding>
                 <marker date="1552342244693" expanded="true" signature="6:78" ph="..." />
@@ -301,7 +294,6 @@
         <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Building.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dialog.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DialogueQue.cs" />
         <option value="$PROJECT_DIR$/Assets/Timer.cs" />
         <option value="$PROJECT_DIR$/Assets/SceneManager.cs" />
         <option value="$PROJECT_DIR$/Assets/ButtonManager.cs" />
@@ -310,6 +302,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Building.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/StoryDialogueManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DialogueQue.cs" />
       </list>
     </option>
   </component>
@@ -411,12 +404,12 @@
       <workItem from="1551661609094" duration="599000" />
       <workItem from="1551921866650" duration="353000" />
       <workItem from="1552066351489" duration="6889000" />
-      <workItem from="1552337195167" duration="4038000" />
+      <workItem from="1552337195167" duration="4895000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58195000" />
+    <option name="totallyTimeSpent" value="59052000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -612,22 +605,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DialogueQue.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="45" column="29" selection-start-line="45" selection-start-column="29" selection-end-line="45" selection-end-column="29" />
-          <folding>
-            <marker date="1551050125128" expanded="true" signature="6:149" ph="..." />
-            <marker date="1551050125128" expanded="true" signature="191:1229" ph="{...}" />
-            <marker date="1551050125128" expanded="true" signature="439:568" ph="{...}" />
-            <marker date="1551050125128" expanded="true" signature="500:561" ph="/* dialogQ.Enqueue(test_1); ... */" />
-            <marker date="1551050125128" expanded="true" signature="626:1227" ph="{...}" />
-            <marker date="1551050125128" expanded="true" signature="694:745" ph="{...}" />
-            <marker date="1551050125128" expanded="true" signature="791:1195" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/Dialog.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -693,7 +670,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/StoryDialogueManager.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
+        <state relative-caret-position="443">
           <caret line="52" column="12" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
           <folding>
             <marker date="1552342244693" expanded="true" signature="6:78" ph="..." />
@@ -703,6 +680,22 @@
             <marker date="1552342244693" expanded="true" signature="838:1358" ph="{...}" />
             <marker date="1552342244693" expanded="true" signature="901:1351" ph="{...}" />
             <marker date="1552342244693" expanded="true" signature="1005:1236" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/DialogueQue.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="44" column="66" lean-forward="true" selection-start-line="44" selection-start-column="66" selection-end-line="44" selection-end-column="66" />
+          <folding>
+            <marker date="1552352092989" expanded="true" signature="6:149" ph="..." />
+            <marker date="1552352092989" expanded="true" signature="191:1258" ph="{...}" />
+            <marker date="1552352092989" expanded="true" signature="439:568" ph="{...}" />
+            <marker date="1552352092989" expanded="true" signature="500:561" ph="/* dialogQ.Enqueue(test_1); ... */" />
+            <marker date="1552352092989" expanded="true" signature="626:1256" ph="{...}" />
+            <marker date="1552352092989" expanded="true" signature="694:745" ph="{...}" />
+            <marker date="1552352092989" expanded="true" signature="791:1224" ph="{...}" />
           </folding>
         </state>
       </provider>

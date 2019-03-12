@@ -1686,6 +1686,16 @@ PrefabInstance:
       propertyPath: m_SortingLayer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 9199182274983463323, guid: 0effbe4a6120e4da5afb8635e6b0603e,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -937158261
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199182274983463323, guid: 0effbe4a6120e4da5afb8635e6b0603e,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0effbe4a6120e4da5afb8635e6b0603e, type: 3}
 --- !u!114 &668980363 stripped
@@ -3576,6 +3586,16 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: 9199182274983463323, guid: 0effbe4a6120e4da5afb8635e6b0603e,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -937158261
+      objectReference: {fileID: 0}
+    - target: {fileID: 9199182274983463323, guid: 0effbe4a6120e4da5afb8635e6b0603e,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0effbe4a6120e4da5afb8635e6b0603e, type: 3}
 --- !u!114 &1638456721 stripped
@@ -5040,6 +5060,14 @@ PrefabInstance:
         type: 3}
       propertyPath: delay_max
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: engineer.Array.data[0].subtitle
+      value: "Thermal to Power. I can keep the crew calm for now, but with Captain
+        gone, I don\u2019t know what to do. If Thermal Control runs out of power before
+        the SOS Party can return, we\u2019re done for. So please. Keep Thermal powered,
+        keep the lights on, keep the hope alive. Please. \u2026 Thermal Out."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47f06e8a24682bc44a4f3fdcf364a4bc, type: 3}

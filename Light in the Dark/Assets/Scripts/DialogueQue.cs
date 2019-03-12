@@ -43,6 +43,7 @@ public class DialogueQue : MonoBehaviour
             audioS.panStereo = currentDialog.pan;
             string subs = currentDialog.subtitle;
             duration = audioS.clip.length + currentDialog.silence;
+            Debug.Log(subs);
             isPlaying = true;
 
             // play audio
