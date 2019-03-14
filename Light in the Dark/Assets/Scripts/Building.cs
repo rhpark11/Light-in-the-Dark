@@ -111,36 +111,37 @@ public class Building : MonoBehaviour
         EnergyBar.fillAmount = energy / maxEnergy;
 
 
-        if (energy / maxEnergy > 0.66f)
+        // Set our energy levels according to the raw ratios
+        if (energy / maxEnergy < 0.2f)
         {
             prev = curr;
-            curr = Status.High;
+            curr = Status.Low;
         }
-        else if(energy / maxEnergy >= 0.33f && energy / maxEnergy <= 0.66f)
+        else if(energy / maxEnergy < 0.66f)
         {
             prev = curr;
             curr = Status.Medium;
+
             if (lowEnergyAlarm.isPlaying == true)
             {
                 lowEnergyAlarm.Stop();
             }
 
         }
-        else if(energy / maxEnergy < 0.33f)
+        else
         {
             prev = curr;
-            curr = Status.Low;
-
+            curr = Status.High;
         }
         
         
-
-        if (energy / maxEnergy > 0.4f)
+        // Handle bar-coloring
+        if (curr == Status.High)
         {
             EnergyBar.color = barHigh;
 
         }
-        else if(energy / maxEnergy >= 0.2f && energy / maxEnergy <= 0.4f)
+        else if(curr == Status.Medium)
         {
          
             EnergyBar.color = barMid;
@@ -158,6 +159,8 @@ public class Building : MonoBehaviour
             alarmCooldown = 5f;
         }
 
+
+        //handle line-coloring
         if (ToggleEnergy)
         {
             foreach (var line in lines)
