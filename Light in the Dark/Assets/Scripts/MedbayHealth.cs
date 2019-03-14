@@ -18,6 +18,7 @@ public class MedbayHealth : MonoBehaviour
     public GameManager gm;
     public AudioSource audioS;
     public Dialog sadNurse;
+    private bool isDead = false;
 
     public DialogueQue dQ;
     void Start()
@@ -34,12 +35,13 @@ public class MedbayHealth : MonoBehaviour
             _health -= _health_decline_rate;
         }
 
-        if(_health < 0){
+        if(_health < 0 && !isDead){
             _health = 0;
             // change some flag or boolean in GM
             Debug.Log("Press F for respects");
             dQ.dialogQ.Enqueue(sadNurse);
             audioS.Play();
+            isDead = true;
         }
 
         _bar.set(_health/_MAX_HEALTH);

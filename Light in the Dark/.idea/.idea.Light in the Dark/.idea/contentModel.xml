@@ -21,7 +21,9 @@
           <e p="DialogueQue.cs" t="Include" />
           <e p="EnergyBar.cs" t="Include" />
           <e p="EnergyMain.cs" t="Include" />
+          <e p="Fading.cs" t="Include" />
           <e p="GameManager.cs" t="Include" />
+          <e p="HighlightHex.cs" t="Include" />
           <e p="MedbayHealth.cs" t="Include" />
           <e p="PostProcess.cs" t="Include" />
           <e p="ResearchProgress.cs" t="Include" />

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEditorInternal.Profiling.Memory.Experimental;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DialogueQue : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class DialogueQue : MonoBehaviour
     private bool isPlaying;
     private float duration = 0;
     public PictureManager pm;
-
+    public Text subtitles;
 
     
     //tests
@@ -46,7 +47,7 @@ public class DialogueQue : MonoBehaviour
             pm.switchPic(currentDialog.speaker);
             string subs = currentDialog.subtitle;
             duration = audioS.clip.length + currentDialog.silence;
-            Debug.Log(subs);
+            subtitles.text = subs;
             isPlaying = true;
 
             // play audio

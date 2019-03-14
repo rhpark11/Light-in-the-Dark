@@ -55,6 +55,8 @@ public class Building : MonoBehaviour
     private float alarmCooldown = 5f;
     private float startalarmCooldown;
 
+    public AudioSource toggleAudio;
+
 
     private Collider2D buildingHitBox;
     void Start()
@@ -79,11 +81,10 @@ public class Building : MonoBehaviour
             if (buildingHitBox.OverlapPoint(mp))
             {
                 ToggleEnergy = !ToggleEnergy;
+                toggleAudio.Play();
           }
 
        }
-        
-        
         
         if (ToggleEnergy)
         {
@@ -93,6 +94,7 @@ public class Building : MonoBehaviour
         if (energy >= maxEnergy)
         {
             ToggleEnergy = false;
+            toggleAudio.Play();
         }
 
         if (energy > 0 && !ToggleEnergy)
