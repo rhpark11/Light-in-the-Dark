@@ -2679,7 +2679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ae07aacfc4997d408d6ab3e7ce57d4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timer: 180
+  timer: 360
   sceneToLoad: EndingWithMB
   timeLeft: {fileID: 1675510625}
 --- !u!114 &1083494693 stripped
@@ -6167,6 +6167,21 @@ PrefabInstance:
       value: This station is large, anchored to a celestial body. Eventually, if they
         do arrive, the SOS Party will find us. What is left of us. And if I finish,
         tragedies like this, tragedies like my mother won't have to happen again.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: researcher.Array.data[0].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: researcher.Array.data[1].speaker
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2539444057540115030, guid: 47f06e8a24682bc44a4f3fdcf364a4bc,
+        type: 3}
+      propertyPath: researcher.Array.data[2].speaker
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47f06e8a24682bc44a4f3fdcf364a4bc, type: 3}

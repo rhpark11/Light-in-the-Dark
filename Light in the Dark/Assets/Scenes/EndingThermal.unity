@@ -278,7 +278,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'GAME OVER
 
-    crew died thermal went to 0'
+    There were no survivors'
 --- !u!222 &731882087
 CanvasRenderer:
   m_ObjectHideFlags: 0
