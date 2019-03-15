@@ -1107,6 +1107,14 @@ PrefabInstance:
       propertyPath: toggleAudio
       value: 
       objectReference: {fileID: 1545483731}
+    - target: {fileID: 1611668858, guid: 2536084fe5ec07648bef18df13f048e2, type: 3}
+      propertyPath: timeBetweenEnergyloss
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1611668858, guid: 2536084fe5ec07648bef18df13f048e2, type: 3}
+      propertyPath: timeBetweenEnergyGain
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1513275427, guid: 2536084fe5ec07648bef18df13f048e2, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0
@@ -2443,6 +2451,14 @@ PrefabInstance:
       propertyPath: toggleAudio
       value: 
       objectReference: {fileID: 2005055687}
+    - target: {fileID: 1667376456, guid: b1465837edf2fe545bb324a8348902f8, type: 3}
+      propertyPath: timeBetweenEnergyloss
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667376456, guid: b1465837edf2fe545bb324a8348902f8, type: 3}
+      propertyPath: timeBetweenEnergyGain
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1667376458, guid: b1465837edf2fe545bb324a8348902f8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3393,6 +3409,14 @@ PrefabInstance:
       propertyPath: toggleAudio
       value: 
       objectReference: {fileID: 1128588503}
+    - target: {fileID: 1667376456, guid: 1e7aba5842e24a14682efcd6ca82236c, type: 3}
+      propertyPath: timeBetweenEnergyGain
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667376456, guid: 1e7aba5842e24a14682efcd6ca82236c, type: 3}
+      propertyPath: timeBetweenEnergyloss
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 1667376458, guid: 1e7aba5842e24a14682efcd6ca82236c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -3891,8 +3915,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _MAX: 100
   _progress: 0.075
-  _progress_increase_rate: 0.075
-  _energy_threshold: 45
+  _progress_increase_rate: 0.034
+  _energy_threshold: 40
   research_credits: 0
   max_credits: 5
   credits:
@@ -5561,7 +5585,7 @@ PrefabInstance:
     - target: {fileID: 2295254268193835846, guid: 8f83663f2aba00d44a361bf2f48f57bd,
         type: 3}
       propertyPath: energyRegenRate
-      value: 2
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2295254268193835846, guid: 8f83663f2aba00d44a361bf2f48f57bd,
         type: 3}
@@ -5581,12 +5605,12 @@ PrefabInstance:
     - target: {fileID: 2295254268193835846, guid: 8f83663f2aba00d44a361bf2f48f57bd,
         type: 3}
       propertyPath: timeBetweenEnergyGain
-      value: 1
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2295254268193835846, guid: 8f83663f2aba00d44a361bf2f48f57bd,
         type: 3}
       propertyPath: maxEnergy
-      value: 400
+      value: 350
       objectReference: {fileID: 0}
     - target: {fileID: 2295254268193835846, guid: 8f83663f2aba00d44a361bf2f48f57bd,
         type: 3}
